@@ -1,7 +1,6 @@
 <?php
 
-include "../class/class.SYS.php";
-$app = new Sys();
+include "../includes/config.inc";
 
 $login_error_message = '';
 $register_error_message = '';
@@ -17,18 +16,6 @@ if (isset($_POST['btnLogin'])) {
     } else if ($password == "") {
         $login_error_message = 'Password field is required!';
     } else {
-        $user_id = $app->Login($username, $password); // check user login
-        if($user_id > 0)
-        {
-            echo "logining in...";exit;
-            $_SESSION['user_id'] = $user_id; // Set Session
-            header("Location: ../index.php"); // Redirect user to the profile.php
-        }
-        else
-        {
-            echo "exiting in...";exit;
-
-            $login_error_message = 'Invalid login details!';
-        }
+        $app->test();
     }
 }

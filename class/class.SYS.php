@@ -18,11 +18,17 @@ class Sys{
     }
     public function Login($username, $password)
     {
-        $this->db->;
-        $this.db->where ('patient_email', $username);
-$db->having ('password', $password);
-$results = $db->get('login');
-return $results;
+        echo "im here";exit;
+        $this->db->where('patient_email', $username);
+        $this->db->where('password', $password);
+        $this->db->get('login');
+        $results = $this->db->getRowCount();
+        print_r($results);exit;
+        return $results;
+    }
+    public function test() {
+        $this->db->where('patient_email', 'oswaldo63@example.net');
+        return $this->db->get('login');
     }
 
 }
