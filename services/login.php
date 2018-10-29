@@ -1,21 +1,21 @@
 <?php
 
 include "../includes/config.inc";
+	$app;
 
 $login_error_message = '';
-$register_error_message = '';
 
 // check Login request
 if (isset($_POST['btnLogin'])) {
 
     $username = trim($_POST['email']);
     $password = trim($_POST['password']);
-
-    if ($username == "") {
-        $login_error_message = 'Username field is required!';
-    } else if ($password == "") {
-        $login_error_message = 'Password field is required!';
+	
+	if ($app->canLogin($username, $password)) {
+		$_SESSION['logged_in'] = true;
+		header("");
     } else {
-        $app->test();
+		$login_error_message = "Username or password incorrect";
+		echo $login_error_message;
     }
 }

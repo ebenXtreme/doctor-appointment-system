@@ -1,34 +1,47 @@
 <?php
+
 session_start();
-include "class.DB.php";
-class Sys{
+	require "class.db.php";
+	
+	class Sys
+	{
     private $db;
     private $database_type = 'mysql';
-    private $database_host = 'localhost:90';
+		private $database_host = 'localhost';
     private $database_username = 'root';
     private $database_password = '';
     private $database_name = 'appSystem';
-	private $EXPIRE_AFTER = 5;
+		private $conn_status = null;
 
     function __construct()
     {
         $this->db = new PDODb($this->database_type, $this->database_host, $this->database_username, $this->database_password, $this->database_name);
-        define('BASE_URL', 'http://localhost/schedulesys');
-        define('ADMIN_BASE_URL', 'http://localhost/schedulesys/admin/');
+	    $this->conn_status = ($this->db) ? true : false;
+	    $this->is_conn();
     }
-    public function Login($username, $password)
+		
+		public function is_conn()
     {
-        echo "im here";exit;
-        $this->db->where('patient_email', $username);
-        $this->db->where('password', $password);
-        $this->db->get('login');
-        $results = $this->db->getRowCount();
-        print_r($results);exit;
-        return $results;
+	    if ($this->conn_status == false) {
+		    return false;
+	    } else {
+		    return true;
+	    }
+	
     }
-    public function test() {
-        $this->db->where('patient_email', 'oswaldo63@example.net');
-        return $this->db->get('login');
-    }
-
+		
+		public function canLogin($username, $password)
+		{
+			try {
+				$this->db->where('patient_email', $username);
+				$this->db->where('patient_password', $password);
+				$user = $this->db->get('login');
+				$canLogin = ($user) ? true : false;
+				return $user;
+			} catch (Exception $ex) {
+				$ex = $this->db->getLastError();
+				return $ex;
+			}
+			
+		}
 }
