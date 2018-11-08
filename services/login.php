@@ -13,7 +13,7 @@ if (isset($_POST['btnLogin'])) {
 	
 	if ($app->canLogin($username, $password)) {
 		$_SESSION['logged_in'] = true;
-		header("");
+		header("Location: ../index.php");
     } else {
 		$login_error_message = "Username or password incorrect";
 		echo $login_error_message;

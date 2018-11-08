@@ -166,7 +166,7 @@
                                         <a href="#">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#">Logout</a>
+                                        <a href="./services/logout.php">Logout</a>
                                     </li>
                                 </ul>
                             </li>

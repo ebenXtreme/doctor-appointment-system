@@ -1,11 +1,13 @@
 <?php
-$page = '';
 
-if (!isset($_SESSION['logged_in']) || ($_SESSION['logged_in'] != true)) {
+	require "./includes/config.inc";
+	$app;
+$page = '';
+if (!$app->isLoggedIn()) {
+	print_r($app->isLoggedIn());
     include "./user/login.html";
 } else {
     include "./includes/header.php";
-
     if(isset($_GET['p'])){
         $page = $_GET['p'];
 
@@ -13,7 +15,6 @@ if (!isset($_SESSION['logged_in']) || ($_SESSION['logged_in'] != true)) {
             include('./includes/dashboard.html');
         }
     }
-
 
     include "./includes/footer.html";
 

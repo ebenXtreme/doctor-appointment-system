@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 	require "class.db.php";
 	
 	class Sys
@@ -29,7 +29,7 @@ session_start();
 	    }
 	
     }
-		
+	
 		public function canLogin($username, $password)
 		{
 			try {
@@ -43,5 +43,12 @@ session_start();
 				return $ex;
 			}
 			
+		}
+		public function isLoggedIn() {
+    	return ((isset($_SESSION['logged_in']))&&($_SESSION['logged_in']==true))? true: false;
+		}
+		public function logout() {
+    	session_unset();
+    	return session_destroy();
 		}
 }
