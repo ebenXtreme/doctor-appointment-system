@@ -13,6 +13,8 @@ if (!$app->isLoggedIn()) {
 
         if($page == 'dashboard'){
             include('./includes/dashboard.html');
+        } elseif ($page == 'appointment') {
+            include('./includes/appointment.html');
         }
     }
 

@@ -95,7 +95,7 @@
                                     <a href="#">Add appointment</a>
                                 </li>
                                 <li>
-                                    <a href="#">View all appointments</a>
+                                    <a href="?p=appointment">View all appointments</a>
                                 </li>
                             </ul>
                         </div>
@@ -125,9 +125,9 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Dashboard </a>
+                        <a class="navbar-brand" href="#"> </a>
                     </div>
-                    <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse big-screen-only">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">

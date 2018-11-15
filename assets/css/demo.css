@@ -415,3 +415,8 @@
         top: 80px;
     }
 }
+@media (max-width:  720px) {
+    .big-screen-only {
+        display: none;
+    }
+} 
