@@ -10,7 +10,7 @@
 		private $database_host = 'localhost';
     private $database_username = 'root';
     private $database_password = '';
-    private $database_name = 'appSystem';
+    private $database_name = 'schedulesys';
 		private $conn_status = null;
 
     function __construct()
@@ -50,5 +50,50 @@
 		public function logout() {
     	session_unset();
     	return session_destroy();
+		}
+		public function addDoctor ($name, $email, $phone, $address, $specialty, $workingDays) {
+			$insertData = [
+				'displayName' => $name,
+				'specialty_id' => $specialty,
+				'phone' => $phone,
+				'email'=> $email,
+				'address' =>$address,
+				'working_days_id' =>$workingDays				
+			];
+			if($this->db->insert('sys_doctor', $insertData)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		public function getLastInsertID()
+		{
+			return $this->db->getLastInsertID();
+		}
+		public function addLoginDetails($id, $email, $password)
+		{
+			$insertData = [
+				'd_id' => $id,
+				'd_email' => $email,
+				'd_password' => $password
+			];
+			if($this->db->insert('sys_d_login', $insertData)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		public function addSpecialty($name)
+		{
+			$insertData = ['type' => $name];
+			if($this->db->insert('sys_specialty', $insertData)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		public function getSpecialty()
+		{
+			return $this->db->get('sys_specialty');
 		}
 }

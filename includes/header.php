@@ -127,7 +127,7 @@
                         </button>
                         <a class="navbar-brand" href="#"> </a>
                     </div>
-                    <div class="collapse navbar-collapse big-screen-only">
+                    <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
