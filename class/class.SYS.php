@@ -33,11 +33,14 @@
 		public function canLogin($username, $password)
 		{
 			try {
-				$this->db->where('patient_email', $username);
-				$this->db->where('patient_password', $password);
-				$user = $this->db->get('login');
+				$this->db->where('d_email', $username);
+				$this->db->where('d_password', $password);
+				$user = $this->db->get('sys_d_login');
 				$canLogin = ($user) ? true : false;
-				return $user;
+				if ($canLogin == true) {
+					$_SESSION['logged_in'] = true;
+				}
+				return $canLogin;
 			} catch (Exception $ex) {
 				$ex = $this->db->getLastError();
 				return $ex;
@@ -95,5 +98,21 @@
 		public function getSpecialty()
 		{
 			return $this->db->get('sys_specialty');
+		}
+		public function getWD()
+		{
+			return $this->db->get('sys_working_time');
+		}
+		public function addWorkingDay($type, $online_days)
+		{
+			$insertData = [
+				'work_type' => $type,
+				'online_days' => $online_days
+			];
+			if($this->db->insert('sys_working_time', $insertData)) {
+				return true;
+			} else {
+				return false;
+			}
 		}
 }

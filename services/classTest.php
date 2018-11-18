@@ -20,3 +20,4 @@
 	// }
 
 	$specialty = $app->getSpecialty();
+	$wd = $app->getWD();

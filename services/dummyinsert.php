@@ -13,28 +13,28 @@ include 'classTest.php';
 <body>
     <form id="sp-form">
         <input type="text" name="name" id="name">
-        <div><input type="text" name="a" value="1" id="a"></div>
-  <div><input type="text" name="b" value="2" id="b"></div>
-  <div><input type="hidden" name="c" value="3" id="c"></div>
-  <div>
-    <textarea name="d" rows="8" cols="40">4</textarea>
-  </div>
-  <div><select name="e">
-    <option value="5" selected="selected">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-  </select></div>
-  <div>
-    <input type="checkbox" name="f" value="8" id="f">
-  </div>
-        <input type="submit" value="Insert!">
+        <button type="submit">Insert!</button>
     </form>
-    <form action="insertdummy.php" method="post">
-        <input type="text" name="name" id="name">
-        <input type="tel" name="phone" id="phone">
-        <input type="email" name="email" id="email">
-        <input type="text" name="address" id="address">
-        <select name="specialty" id="specialty">
+    <form id="wd-form">
+        <select name="type" id="type">
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="night">Night</option>
+        </select>
+        <select name="online_days" id="online_days">
+            <option value="weekend">Weekend</option>
+            <option value="weekdays">WeekDays</option>
+        </select>
+        <button type="submit">Insert!</button>
+    </form>
+    <form action="insertdummy.php" method="post" id="doc-form">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="tel" name="phone" id="phone" placeholder="phone">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input type="text" name="address" id="address" placeholder="address">
+        <input type="password" name="password" id="password" placeholder="password">
+        <select name="specialty" id="specialty" aria-placeholder="specialty">
             <option value="">select one</option>
     <?php 
             foreach ($specialty as $key=>$value) {?>
@@ -47,20 +47,55 @@ include 'classTest.php';
         </select>
         <select name="working_days_id" id="working_days_id">
             <option value="">select one</option>
+            <?php 
+            foreach ($wd as $key=>$value) {?>
+                <option value="<?=$value['id']?>"><?=$value['work_type']?> | <?=$value['online_days']?></option>
+
+            <?php
+            }
+            ?>
         </select>
     </form>
 
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
     <script>
         $(function() {
-            $("#sp-form").on('mouseleave', function(e) {
+            $("#wd-form").on('submit', function(e) {
+                e.preventDefault();
+                myData = $(this).serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: "insertwd.php",
+                    data: myData,
+                    success: function (response) {
+                        alert(response);
+                        $("#wd-form :input").val("");
+                    }
+                });
+            })
+            $("#sp-form").on('submit', function(e) {
+                e.preventDefault();
                 myData = $(this).serializeArray();
                 $.ajax({
                     type: "POST",
                     url: "insertspecialty.php",
                     data: myData,
                     success: function (response) {
-                        console.log(response);
+                        alert(response);
+                        $("#sp-form :input").val("");
+                    }
+                });
+            })
+            $("#doc-form").on('submit', function(e) {
+                e.preventDefault();
+                myData = $(this).serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: "insertdoc.php",
+                    data: myData,
+                    success: function (response) {
+                        alert(response);
+                        $("#sp-form :input").val("");
                     }
                 });
             })

@@ -134,11 +134,22 @@
             $('.card').removeClass('card-hidden');
         }, 700);
 
-        $("#loginForm").on("submit", function (e) {
-            console.log(e);
-
-            return null;
-        })
+        $("#loginForm").on("submit", function (e) { 
+            e.preventDefault();
+            myData = $(this).serializeArray();
+            $.ajax({
+                type: "POST",
+                url: "./services/login.php",
+                data: myData,
+                success: function (response) {
+                    if (response == true) {
+                        window.location.href = "?p=dashboard";
+                    } else {
+                        alert("Invalid Username or Password");
+                    }
+                }
+            });
+         })
     });
 </script>
 

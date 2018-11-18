@@ -28,8 +28,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
 
     <!-- other accessories -->
-    <link rel="stylesheet" href="./assets/css/fullcalendar.min.css">
-    <link rel="stylesheet" href="./assets/css/fullcalendar.print.min.css">
 </head>
 
 <body>
@@ -63,7 +61,7 @@
                         <div class="collapse" id="collapseExample">
                             <ul class="nav">
                                 <li>
-                                    <a href="#">My Profile</a>
+                                    <a href="?p=profile">My Profile</a>
                                 </li>
                                 <li>
                                     <a href="#">Edit Profile</a>
