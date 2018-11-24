@@ -74,20 +74,26 @@
                     </div>
                 </div>
                 <ul class="nav">
-                    <li class="active">
+                    <li>
                         <a href="?p=dashboard">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a data-toggle="collapse" href="#pagesExamples">
+                        <a href="?p=schedule">
+                            <i class="material-icons">dashboard</i>
+                            <p>Schedule</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#appointment">
                             <i class="material-icons">image</i>
                             <p>Appointment
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="pagesExamples">
+                        <div class="collapse" id="appointment">
                             <ul class="nav">
                                 <li>
                                     <a href="#">Add appointment</a>
@@ -99,10 +105,22 @@
                         </div>
                     </li>
                     <li>
-                        <a href="calendar.html">
-                            <i class="material-icons">date_range</i>
-                            <p>Calendar</p>
+                        <a data-toggle="collapse" href="#patient">
+                            <i class="material-icons">image</i>
+                            <p>Manage Patient
+                                <b class="caret"></b>
+                            </p>
                         </a>
+                        <div class="collapse" id="patient">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#">Add Patient</a>
+                                </li>
+                                <li>
+                                    <a href="#">View all patient</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa670dd-cddd-43cc-b3b3-2e0820c9a374" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/class.SYS.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/class.SYS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/classTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/classTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/dummyinsert.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/dummyinsert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,7 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state>
               <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
@@ -33,7 +25,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state>
               <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
             </state>
           </provider>
@@ -42,7 +34,7 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2192">
+            <state>
               <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
             </state>
           </provider>
@@ -51,7 +43,7 @@
       <file leaf-file-name="config.inc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/config.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state>
               <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
@@ -60,7 +52,7 @@
       <file leaf-file-name="classTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/classTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state>
               <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
@@ -69,39 +61,30 @@
       <file leaf-file-name="class.SYS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/class.SYS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+            <state relative-caret-position="126">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/dashboard.html">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/profile.html">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="185" column="68" lean-forward="true" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state>
               <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.db.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/class.db.php">
+      <file leaf-file-name="class.DB.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/class.DB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
+            <state>
               <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
@@ -126,10 +109,10 @@
         <option value="$PROJECT_DIR$/includes/config.inc" />
         <option value="$PROJECT_DIR$/class/class.db.php" />
         <option value="$PROJECT_DIR$/user/login.html" />
-        <option value="$PROJECT_DIR$/class/class.SYS.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/services/logout.php" />
         <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/class/class.SYS.php" />
       </list>
     </option>
   </component>
@@ -157,27 +140,51 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="schedulesys" type="cbb8eebc:String" user="schedulesys" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="schedulesys" type="cbb8eebc:String" user="schedulesys" />
+              <item name="includes" type="cbb8eebc:String" user="includes" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="schedulesys" type="cbb8eebc:String" user="schedulesys" />
+              <item name="services" type="cbb8eebc:String" user="services" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="schedulesys" type="cbb8eebc:String" user="schedulesys" />
+              <item name="user" type="cbb8eebc:String" user="user" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="C:" type="cbb8eebc:String" user="C:" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="schedulesys" type="b2602c69:ProjectViewProjectNode" />
               <item name="schedulesys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="schedulesys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="schedulesys" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="schedulesys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="schedulesys" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,7 +195,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -223,6 +230,7 @@
       <workItem from="1541389858251" duration="8000" />
       <workItem from="1541414835060" duration="1492000" />
       <workItem from="1542540252949" duration="1936000" />
+      <workItem from="1542553245634" duration="2491000" />
     </task>
     <task id="LOCAL-00001" summary="login...redirect..">
       <created>1540853349368</created>
@@ -235,7 +243,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33569000" />
+    <option name="totallyTimeSpent" value="36060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -283,13 +291,6 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/config.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/classTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -314,7 +315,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
@@ -359,7 +360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -404,7 +405,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -449,7 +450,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -498,7 +499,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2752">
           <caret line="172" column="2" lean-forward="true" selection-start-line="172" selection-start-column="2" selection-end-line="172" selection-end-column="2" />
@@ -520,7 +521,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/config.inc" />
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13552">
           <caret line="847" column="49" lean-forward="true" selection-start-line="847" selection-start-column="49" selection-end-line="847" selection-end-column="49" />
@@ -550,69 +551,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/classTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state>
           <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/config.inc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state>
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.db.php">
+    <entry file="file://$PROJECT_DIR$/class/class.DB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
+        <state>
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state>
           <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2192">
+        <state>
           <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/class.SYS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state>
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state>
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="185" column="68" lean-forward="true" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
+        <state relative-caret-position="1791">
+          <caret line="158" column="67" selection-start-line="158" selection-start-column="67" selection-end-line="158" selection-end-column="67" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/class.SYS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/profile.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

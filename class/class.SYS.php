@@ -7,7 +7,7 @@
 	{
     private $db;
     private $database_type = 'mysql';
-		private $database_host = 'localhost';
+    private $database_host = 'localhost';
     private $database_username = 'root';
     private $database_password = '';
     private $database_name = 'schedulesys';

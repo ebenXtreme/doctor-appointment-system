@@ -17,6 +17,8 @@ if (!$app->isLoggedIn()) {
             include('./includes/appointment.html');
         } elseif ($page == 'profile') {
             include('./includes/profile.html');
+        } elseif ($page == 'new-appointment') {
+            include('./includes/addApp.html');
         }
     }
 
