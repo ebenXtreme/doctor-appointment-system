@@ -32,19 +32,17 @@
 	
 		public function canLogin($username, $password)
 		{
-			try {
+			
 				$this->db->where('d_email', $username);
 				$this->db->where('d_password', $password);
 				$user = $this->db->get('sys_d_login');
 				$canLogin = ($user) ? true : false;
 				if ($canLogin == true) {
 					$_SESSION['logged_in'] = true;
+					$_SESSION['user'] = $user;
 				}
 				return $canLogin;
-			} catch (Exception $ex) {
-				$ex = $this->db->getLastError();
-				return $ex;
-			}
+			
 			
 		}
 		public function isLoggedIn() {
@@ -114,5 +112,24 @@
 			} else {
 				return false;
 			}
+		}
+		public function addSchedule($date, $day, $start_time, $end_time, $available)
+		{
+			$insertData = [
+				'date' => $date,
+				'day' => $day,
+				'start_time' => $start_time,
+				'end_time' => $end_time,
+				'available' => $available
+			];
+			if ($this->db->insert('sys_daily', $insertData)) {
+				return true;
+			} else {
+				return $this->db->getLastError();
+			}
+		}
+		public function getCurrentUser()
+		{
+			$cu = $_SESSION[''];
 		}
 }

@@ -11,8 +11,5 @@ $message = '';
     $username = trim($_POST['email']);
 		$password = trim($_POST['password']);
 
-		if($app->canLogin($username, $password)) {
-			echo 1;
-		} else {
-			echo 0;
-		}
+		$result = $app->canLogin($username, $password);
+		echo $result;

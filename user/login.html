@@ -142,11 +142,9 @@
                 url: "./services/login.php",
                 data: myData,
                 success: function (response) {
-                    if (response == true) {
-                        window.location.href = "?p=dashboard";
-                    } else {
-                        alert("Invalid Username or Password");
-                    }
+                    alert(response);
+                }, error: function (err) {
+                    console.log(err);
                 }
             });
          })

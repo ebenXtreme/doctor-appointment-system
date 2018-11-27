@@ -1,0 +1,58 @@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <form method="POST" class="form-horizontal" id="schedule-form">
+                        <div class="card-header card-header-text" data-background-color="rose">
+                            <h4 class="card-title">Add Schedule</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Date</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" name="date" id="datee" class="form-control datepicker" value="2018/11/4" />
+                                    </div>
+                                </div>
+                                <label class="col-sm-2 label-on-left">Day</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input class="form-control" value="Monday" disabled type="text" name="day" id="schedule-day" />
+                                    </div>
+                                </div>
+                                <label class="col-sm-2 label-on-left">Start TIme</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" name="start_time" class="form-control timepicker" value="14:00" />
+                                    </div>
+                                </div>
+                                <label class="col-sm-2 label-on-left">End Time</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" name="end_time" class="form-control timepicker" value="14:00" />
+                                    </div>
+                                </div>
+                                <label class="col-sm-2 label-on-left">Available?</label>
+                                <div class="col-lg-5 col-md-6 col-sm-3">
+                                        <select class="selectpicker" data-style="btn  btn-round" name="available" title="Are you Available?" data-size="7">
+                                            <option disabled selected>Choose one</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="col-sm-offset-6 col-md-offset-6 col-lg-offset-6">
+                                <button class="btn btn-success btn-round" type="submit">
+                                    <i class="material-icons">favorite</i> Proceed
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

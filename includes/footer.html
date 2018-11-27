@@ -1,14 +1,14 @@
 <footer class="footer">
-        <div class="container-fluid">
-            <p class="copyright pull-left">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                E-Xtreme
-            </p>
-        </div>
-    </footer>
+    <div class="container-fluid">
+        <p class="copyright pull-left">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            E-Xtreme
+        </p>
+    </div>
+</footer>
 </div>
 </div>
 <div class="fixed-plugin">
@@ -60,17 +60,46 @@
 <!-- other accessories  -->
 
 <script type="text/javascript">
-$(document).ready(function () {
+    $(document).ready(function () {
 
-// Javascript method's body can be found in assets/js/demos.js
-demo.initDashboardPageCharts();
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
 
-demo.initVectorMap();
+        demo.initVectorMap();
 
-demo.initFullCalendar();
-demo.initMaterialWizard();
+        demo.initFullCalendar();
+        demo.initMaterialWizard();
+        demo.initFormExtendedDatetimepickers();
+        
+        
+            var j = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+            var d = new Date($("#datee").val());
+            day = j[d.getDay()];
+            $("#schedule-day").val(day);
 
-});
+        $("#datee").on("change paste keyup select blur",function (e) {
+            var j = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+            var d = new Date($(this).val());
+            day = j[d.getDay()];
+            $("#schedule-day").val(day);
+        })
+
+        $("#schedule-form").on("submit", function (e) {
+            e.preventDefault();
+            var disabled = $(this).find(':input:disabled').removeAttr('disabled');
+            data = $(this).serializeArray();
+            disabled.attr('disabled','disabled');
+            $.ajax({
+                type: "POST",
+                url: "./services/addSchedule.php",
+                data: data,
+                success: function (response) {
+                    alert(response);
+                }
+            });
+        });
+
+    });
 </script>
 
 
