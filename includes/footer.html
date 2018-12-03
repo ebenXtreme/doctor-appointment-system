@@ -15,6 +15,17 @@
 
 </div>
 </body>
+
+<script>
+
+    Object.defineProperty(String.prototype, 'toFirstCaps', {
+        value: function () {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+        },
+        writable: true,
+        configurable: true
+    });
+</script>
 <!--   Core JS Files   -->
 <script src="./assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="./assets/js/jquery-ui.min.js" type="text/javascript"></script>
@@ -70,19 +81,20 @@
         demo.initFullCalendar();
         demo.initMaterialWizard();
         demo.initFormExtendedDatetimepickers();
-        
-        
-            var j = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        demo.initCustomTimePicker('morning');
+
+
+        var j = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var d = new Date($("#datee").val());
             day = j[d.getDay()];
             $("#schedule-day").val(day);
 
         $("#datee").on("change paste keyup select blur",function (e) {
-            var j = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+            var j = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var d = new Date($(this).val());
             day = j[d.getDay()];
             $("#schedule-day").val(day);
-        })
+        });
 
         $("#schedule-form").on("submit", function (e) {
             e.preventDefault();
@@ -98,6 +110,28 @@
                 }
             });
         });
+        getArray = [];
+        getArray = ['profile_name', 'shift'];
+        // getArray = {'pname': 'profile_name', 'shift':'shift'};
+
+        // $('input[name=start_time]').val(new Date().toTimeString());
+
+        $.get("./services/loadDetail.php", getArray[0],
+            function (data, textStatus, jqXHR) {
+                $(".username").html(data);
+            }
+        );
+        $.get("./services/loadDetail.php", getArray[1],
+            function (data, textStatus, jqXHR) {
+                // alert(data)
+                shift = JSON.parse(data);
+                shiftType = shift.shift_type;
+                online_days = shift.online_days;
+                shiftType = shiftType.toFirstCaps();
+                online_days = online_days.toFirstCaps();
+                $(".shift_type").append(" - " + shiftType + " | " + online_days);
+            }
+        );
 
     });
 </script>

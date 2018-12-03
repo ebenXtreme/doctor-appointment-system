@@ -12,6 +12,7 @@
     private $database_password = '';
     private $database_name = 'schedulesys';
 		private $conn_status = null;
+		private $currentUser;
 
     function __construct()
     {
@@ -40,6 +41,7 @@
 				if ($canLogin == true) {
 					$_SESSION['logged_in'] = true;
 					$_SESSION['user'] = $user;
+					$this->currentUser = $_SESSION['user'];
 				}
 				return $canLogin;
 			
@@ -130,6 +132,27 @@
 		}
 		public function getCurrentUser()
 		{
-			$cu = $_SESSION[''];
+			$cu = $_SESSION['user'];
+			return $cu;
+		}
+		
+		public function getCurrentUserDetail()
+		{
+			$cu = $this->getCurrentUser()[0]['d_id'];
+			$this->db->where('id', $cu);
+			return $this->db->get('sys_doctor');
+		}
+		
+		public function getSchedule()
+		{
+			return $this->db->get('sys_daily');
+		}
+		
+		public function getCurrentUserShift()
+		{
+			$user = $this->getCurrentUserDetail();
+			$shift = $user[0]['shift_type_id'];
+			$this->db->where('id', $shift);
+			return $this->db->get('sys_shift_type');
 		}
 }

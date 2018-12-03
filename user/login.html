@@ -132,7 +132,7 @@
         setTimeout(function () {
             // after 1000 ms we add the class animated to the login/register card
             $('.card').removeClass('card-hidden');
-        }, 700);
+        }, 100);
 
         $("#loginForm").on("submit", function (e) { 
             e.preventDefault();
@@ -142,7 +142,11 @@
                 url: "./services/login.php",
                 data: myData,
                 success: function (response) {
-                    alert(response);
+                    if (response == true) {
+                        window.location.href = "?p=dashboard";
+                    } else {
+                        demo.showSwal('wrong-password');
+                    }
                 }, error: function (err) {
                     console.log(err);
                 }

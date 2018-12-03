@@ -54,8 +54,8 @@
                         <img src="./assets/img/faces/avatar.jpg" />
                     </div>
                     <div class="info">
-                        <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                            Current User
+                        <a data-toggle="collapse" href="#collapseExample" class="collapsed username">
+
                             <b class="caret"></b>
                         </a>
                         <div class="collapse" id="collapseExample">

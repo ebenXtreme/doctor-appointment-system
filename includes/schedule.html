@@ -5,7 +5,7 @@
                 <div class="card">
                     <form method="POST" class="form-horizontal" id="schedule-form">
                         <div class="card-header card-header-text" data-background-color="rose">
-                            <h4 class="card-title">Add Schedule</h4>
+                            <h4 class="card-title shift_type">Add Schedule</h4>
                         </div>
                         <div class="card-content">
                             <div class="row">
@@ -24,7 +24,7 @@
                                 <label class="col-sm-2 label-on-left">Start TIme</label>
                                 <div class="col-sm-10">
                                     <div class="form-group">
-                                        <input type="text" name="start_time" class="form-control timepicker" value="14:00" />
+                                        <input type="text" name="start_time" class="form-control mytimepicker"/>
                                     </div>
                                 </div>
                                 <label class="col-sm-2 label-on-left">End Time</label>
@@ -51,6 +51,44 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th></th>
+                                    <th>Day</th>
+                                    <th>Date</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="optionsCheckboxes" checked>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Moleskine Agenda</td>
+                                    <td>Office</td>
+                                    <td>25</td>
+                                    <td class="">&euro; 49</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

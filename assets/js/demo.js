@@ -222,7 +222,7 @@ demo = {
         image_src = $page.data('image');
 
         if(image_src !== undefined){
-            image_container = '<div class="full-page-background" style="background-image: url(' + image_src + ') "/>'
+            image_container = '<div class="full-page-background" style="background-image: url(' + image_src + ') "/>';
             $page.append(image_container);
         }
     },
@@ -276,6 +276,29 @@ demo = {
 
             }
          });
+    },
+    initCustomTimePicker: function (type) {
+        if (type === 'morning') {
+            $('.mytimepicker').datetimepicker({
+                minDate: moment({h: 7}),
+                maxDate: moment({h: 12, m: 30}),
+                format: 'H:mm',    // use this format if you want the 24hours timepicker
+                // format: 'h:mm A',    //use this format if you want the 12hours timpiecker with AM/PM toggle
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-chevron-up",
+                    down: "fa fa-chevron-down",
+                    previous: 'fa fa-chevron-left',
+                    next: 'fa fa-chevron-right',
+                    today: 'fa fa-screenshot',
+                    clear: 'fa fa-trash',
+                    close: 'fa fa-remove',
+                    inline: true
+
+                }
+            });
+        }
     },
 
     initMaterialWizard: function(){
@@ -420,7 +443,7 @@ demo = {
 
                 reader.onload = function (e) {
                     $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                }
+                };
                 reader.readAsDataURL(input.files[0]);
             }
         }
@@ -478,7 +501,7 @@ demo = {
             low: 0,
             high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
-        }
+        };
 
         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
@@ -507,7 +530,7 @@ demo = {
             high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
             showPoint: false
-        }
+        };
 
         var RoundedLineChart = new Chartist.Line('#roundedLineChart', dataRoundedLineChart, optionsRoundedLineChart);
 
@@ -534,7 +557,7 @@ demo = {
                 point: 'ct-point ct-white',
                 line: 'ct-line ct-white'
             }
-        }
+        };
 
         var straightLinesChart = new Chartist.Line('#straightLinesChart', dataStraightLinesChart, optionsStraightLinesChart);
 
@@ -707,7 +730,7 @@ demo = {
             low: 0,
             high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: { top: 0, right: 0, bottom: 0, left: 0},
-        }
+        };
 
         var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
@@ -731,7 +754,7 @@ demo = {
             low: 0,
             high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: { top: 0, right: 0, bottom: 0, left: 0}
-        }
+        };
 
         var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
 
@@ -864,10 +887,16 @@ demo = {
     	}else if(type == 'auto-close'){
         	swal({ title: "Auto close alert!",
             	   text: "I will close in 2 seconds.",
-            	   timer: 2000,
+                timer: 1000,
+                showConfirmButton: false
+            });
+        } else if (type == 'wrong-password') {
+            swal({
+                title: "Wrong Email/Passwod combination",
+                timer: 1000,
             	   showConfirmButton: false
                 });
-    	} else if(type == 'input-field'){
+        } else if (type == 'input-field') {
             swal({
                     title: 'Input something',
                     html: '<div class="form-group">' +
@@ -938,7 +967,7 @@ demo = {
           scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
           styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
 
-        }
+        };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
         var marker = new google.maps.Marker({
@@ -958,7 +987,7 @@ demo = {
             zoom: 8,
             center: myLatlng,
             scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-        }
+        };
 
         var map = new google.maps.Map(document.getElementById("regularMap"), mapOptions);
 
@@ -980,7 +1009,7 @@ demo = {
             zoomControl: true,
             styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
 
-        }
+        };
 
         var map = new google.maps.Map(document.getElementById("customSkinMap"), mapOptions);
 
@@ -1000,7 +1029,7 @@ demo = {
             scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
             center: myLatlng,
              mapTypeId: google.maps.MapTypeId.SATELLITE
-        }
+        };
 
         var map = new google.maps.Map(document.getElementById("satelliteMap"), mapOptions);
 
@@ -1168,4 +1197,4 @@ demo = {
         });
 	}
 
-}
+};
