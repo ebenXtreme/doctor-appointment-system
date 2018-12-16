@@ -132,6 +132,18 @@
                 $(".shift_type").append(" - " + shiftType + " | " + online_days);
             }
         );
+        $.get("./services/loadSchedule.php",
+            function (data, textStatus, jqXHR) {
+                data = JSON.parse(data);
+                console.log(data);
+                $.each(data, (i, e)=>{
+                    $("#shedule-table tr").append(
+                        $('td').text(e.id),
+                        $('td').text(e.)
+                    );
+                })
+            },
+        );
 
     });
 </script>

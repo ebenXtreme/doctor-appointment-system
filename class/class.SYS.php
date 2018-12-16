@@ -122,7 +122,8 @@
 				'day' => $day,
 				'start_time' => $start_time,
 				'end_time' => $end_time,
-				'available' => $available
+				'available' => $available,
+				'd_id' => $this->getCurrentUser()[0]['d_id']
 			];
 			if ($this->db->insert('sys_daily', $insertData)) {
 				return true;
@@ -155,4 +156,19 @@
 			$this->db->where('id', $shift);
 			return $this->db->get('sys_shift_type');
 		}
+		public function getCustomValue($table, $condition, $conditionValue)
+		{
+			$this->db->where($condition, $conditionValue);
+			return $this->db->get($table);
+		}
+		public function getRaw($sql)
+		{
+			return $this->db->rawQuery($sql);
+		}
+		public function loadSchedule()
+		{
+			return $this->db->get('sys_daily');
+		}
 }
+//0501595249
+//nkesia
