@@ -55,6 +55,7 @@ include 'classTest.php';
             }
             ?>
         </select>
+        <button type="submit">Insert Doc!</button>
     </form>
 
     <script src="../assets/js/jquery-3.1.1.min.js"></script>
@@ -89,6 +90,7 @@ include 'classTest.php';
             $("#doc-form").on('submit', function(e) {
                 e.preventDefault();
                 myData = $(this).serializeArray();
+                console.log(myData);
                 $.ajax({
                     type: "POST",
                     url: "insertdoc.php",

@@ -81,11 +81,12 @@
         demo.initFullCalendar();
         demo.initMaterialWizard();
         demo.initFormExtendedDatetimepickers();
-        demo.initCustomTimePicker('morning');
+
+            var d = new Date($("#datee").val()), shiftType = '';
+
 
 
         var j = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            var d = new Date($("#datee").val());
             day = j[d.getDay()];
             $("#schedule-day").val(day);
 
@@ -111,7 +112,7 @@
             });
         });
         getArray = [];
-        getArray = ['profile_name', 'shift'];
+        getArray = ['profile_name', 'shift',];
         // getArray = {'pname': 'profile_name', 'shift':'shift'};
 
         // $('input[name=start_time]').val(new Date().toTimeString());
@@ -126,6 +127,7 @@
                 // alert(data)
                 shift = JSON.parse(data);
                 shiftType = shift.shift_type;
+        demo.initCustomTimePicker(shift.shift_type.toString());
                 online_days = shift.online_days;
                 shiftType = shiftType.toFirstCaps();
                 online_days = online_days.toFirstCaps();
@@ -135,11 +137,10 @@
         $.get("./services/loadSchedule.php",
             function (data, textStatus, jqXHR) {
                 data = JSON.parse(data);
-                console.log(data);
+                // console.log(data);
                 $.each(data, (i, e)=>{
                     $("#shedule-table tr").append(
-                        $('td').text(e.id),
-                        $('td').text(e.)
+                        $('td').text(e.id)
                     );
                 })
             },

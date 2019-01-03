@@ -11,7 +11,7 @@ $available = $_POST['available'];
 
 
 if ($app->addSchedule($date, $day, $start_time, $end_time, $available)) {
-    echo "Schedule Added Sucessfully";
+    echo "Schedule Added Successfully";
 } else {
     echo "A simple error occurred, please try again";
 }

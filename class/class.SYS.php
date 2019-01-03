@@ -61,7 +61,7 @@
 				'phone' => $phone,
 				'email'=> $email,
 				'address' =>$address,
-				'working_days_id' =>$workingDays				
+				'working_time_id' =>$workingDays
 			];
 			if($this->db->insert('sys_doctor', $insertData)) {
 				return true;
@@ -103,7 +103,7 @@
 		{
 			return $this->db->get('sys_working_time');
 		}
-		public function addWorkingDay($type, $online_days)
+		public function addWorkingTime($type, $online_days)
 		{
 			$insertData = [
 				'work_type' => $type,
@@ -152,9 +152,9 @@
 		public function getCurrentUserShift()
 		{
 			$user = $this->getCurrentUserDetail();
-			$shift = $user[0]['shift_type_id'];
+			$shift = $user[0]['working_time_id'];
 			$this->db->where('id', $shift);
-			return $this->db->get('sys_shift_type');
+			return $this->db->get('sys_working_time');
 		}
 		public function getCustomValue($table, $condition, $conditionValue)
 		{
